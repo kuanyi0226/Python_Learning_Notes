@@ -15,7 +15,7 @@ print(data)
 
 #將公司名稱列表出來到檔案中(擷取)
 clist=data["result"]["results"]
-with open("data.txt","w",encoding="utf-8") as file:
+with open("data2.txt","w",encoding="utf-8") as file:
     for company in clist: #迴圈在with內，把資料一個一個抓出來
         file.write(company["公司名稱"]+"\n") #以上為字典列表，公司名稱是key，xxx公司是value
 

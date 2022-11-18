@@ -22,18 +22,18 @@ print(sum)
 
 #使用JSON格式讀取檔案
 import json
-with open("config.json", mode="r") as file:
+with open("data.json", mode="r") as file:
     data=json.load(file) #data是個字典資料
 print("name: ", data["name"])
 print("version: ", data["version"])
 
 #從檔案中讀取JSON資料，修改後放入data裡面
-with open("config.json", mode="r") as file:
+with open("data.json", mode="r") as file:
     data=json.load(file)
 print(data)
 data["name"]="new name"#修改變數中的資料
 
-with open("config.json", mode="w") as file: #把最新(修改過)資料複寫回檔案中
+with open("data.json", mode="w") as file: #把最新(修改過)資料複寫回檔案中
     json.dump(data,file)
 
 

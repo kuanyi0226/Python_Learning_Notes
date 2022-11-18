@@ -34,3 +34,11 @@ for i in range(n+1): #i從0~n
         break
     else:
         print("沒有正整數平方根")
+
+#Practice: 正整數反轉
+num = int(input('num = '))
+reversed_num = 0
+while num > 0:
+    reversed_num = reversed_num * 10 + num % 10
+    num //= 10
+print(reversed_num)
